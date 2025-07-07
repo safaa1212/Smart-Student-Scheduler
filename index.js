@@ -14,9 +14,9 @@ const students = [
 app.post('/api/students', (req, res) => {
     const { name, email, password } = req.body;
 
-    if (!name?.trim() || !email ?.trim() ||!password?.trim()) {
+    if (!name?.trim() || !email?.trim() || !password?.trim()) {
         return res.status(400).json({
-            message: 'Missing or invalid data'
+            message: 'Missing or invalid data , please filling all fields properly'
         });
     }
 
